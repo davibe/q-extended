@@ -24,6 +24,9 @@ A function that turns a generator into a promise
     Q.genrun = (generator) -> Q.async(generator)()
 
 
+
+    module.exports = Q
+
 Example of combined usage 
 
 
@@ -41,3 +44,5 @@ Example of combined usage
     .then (message) ->
       console.log message
       
+
+
