@@ -30,19 +30,19 @@ A function that turns a generator into a promise
 Example of combined usage 
 
 
-  if not module.parent
+    if not module.parent
 
-    Q.genrun ->
-      console.log 'Counting from 1 to 10'
-      
-      for i in [1..10]
-        console.log "step #{i}/10"
-        yield Q.delay 1000
-      
-      yield 'Count has finished'
-      
-    .then (message) ->
-      console.log message
+      Q.genrun ->
+        console.log 'Counting from 1 to 10'
+        
+        for i in [1..10]
+          console.log "step #{i}/10"
+          yield Q.delay 1000
+        
+        yield 'Count has finished'
+        
+      .then (message) ->
+        console.log message
       
 
 
